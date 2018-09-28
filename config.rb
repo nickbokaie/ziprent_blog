@@ -7,11 +7,6 @@ end
 
 #Dato CMS Stuff
 
-activate :dato, live_reload: true, preview: true
-# enable livereload on development
-configure :development do
-  activate :livereload
-end
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
