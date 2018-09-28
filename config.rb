@@ -21,9 +21,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# Livereload
-activate :livereload
-
 # Pretty URLs
 activate :directory_indexes
 
