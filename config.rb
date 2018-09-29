@@ -1,12 +1,13 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-#Dato CMS Stuff
 
+activate :livereload
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -27,6 +28,9 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
 end
+
+activate :dato, token: '9c8bc938008dbc52275a5ed6649a8c'
+
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
