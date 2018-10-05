@@ -1,0 +1,27 @@
+---
+title: Ziprent Blog
+---
+<!-- Hero Container -->
+<div class="hero-container">
+  <div class="hero-title">
+    <h1><%= dato.homepage.header %></h1>
+    <p><%= dato.homepage.description %></p>
+  </div>
+  <div class="hero-img">
+    <img src="/images/illustrations/blog.svg">
+  </div>
+</div>
+
+<h2>Ziprent Ramblings</h2>
+
+<!-- Article container -->
+<div class="article-container">
+  <% items.each do |article| %>
+  <article>
+      <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image.url(w: 450, fm: 'png', auto: 'compress') %>"></a>
+      <a href="/articles/<%= article.slug %>"><h3><%= article.title %></h3></a>
+      <p><%= article.description %></p>
+      <p class="article-category-date">Posted in Design | 01 October 2016</p>
+  </article>
+  <% end %>
+</div>

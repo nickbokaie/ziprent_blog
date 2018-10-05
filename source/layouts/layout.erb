@@ -5,13 +5,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Social Sharing Meta Tags -->
-    <meta property="og:title" content="Ziprent">
-    <meta property="og:description" content="Automated tenant placement service">
-    <meta property="og:image" content="images/meta/thumbnail.png">
-    <meta property="og:url" content="ziprent.com">
-    <meta name="twitter:card" content="images/meta/thumbnail.png">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <!-- Stylesheets -->
@@ -25,7 +18,9 @@
   </head>
   <body>
     <%= partial 'partials/nav' %>
-    <%= yield %>
+    <div class="main-container">
+      <%= yield %>
+    </div>
     <%= partial 'partials/footer' %>
   </body>
 </html>

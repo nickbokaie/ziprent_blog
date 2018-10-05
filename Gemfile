@@ -7,3 +7,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem "middleman-dato"
+gem 'middleman-paginate'
