@@ -18,7 +18,7 @@ title: Ziprent Blog
 <div class="article-container">
   <% items.each do |article| %>
   <article>
-      <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image.url(w: 450, fm: 'png', auto: 'compress') %>"></a>
+      <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image %>"></a>
       <a href="/articles/<%= article.slug %>"><h3><%= article.title %></h3></a>
       <p><%= article.description %></p>
       <p class="article-category-date">Posted in Design | 01 October 2016</p>
