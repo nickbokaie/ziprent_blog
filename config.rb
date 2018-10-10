@@ -13,6 +13,11 @@ configure :development do
   activate :livereload
 end
 
+configure :build do
+  activate :minify_html
+  activate :minify_css
+end
+
 ignore '/templates/*'
 
 dato.tap do |dato|
@@ -23,16 +28,6 @@ dato.tap do |dato|
   end
 end
 
-# Per-page layout changes
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
-
-
-configure :build do
-  activate :minify_html
-  activate :minify_css
-end
 
 
 
