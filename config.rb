@@ -13,6 +13,7 @@ configure :development do
   activate :livereload
 end
 
+ignore '/templates/*'
 
 dato.tap do |dato|
   paginate dato.articles, "", "/templates/index.html", per_page: 5
