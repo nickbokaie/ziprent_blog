@@ -1,6 +1,7 @@
----
-title: Ziprent Blog
----
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.homepage) %>
+<% end %>
+
 <!-- Hero Container -->
 <div class="hero-container">
   <div class="hero-title">
@@ -18,10 +19,10 @@ title: Ziprent Blog
 <div class="article-container">
   <% items.each do |article| %>
   <article>
-      <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image %>"></a>
+      <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image.url(w: 300, fm: :png) %>"></a>
       <a href="/articles/<%= article.slug %>"><h3><%= article.title %></h3></a>
       <p><%= article.description %></p>
-      <p class="article-category-date">Posted in Design | 01 October 2016</p>
+      <p class="article-category-date">Posted on <%= article.publication_date %> </p>
   </article>
   <% end %>
 </div>

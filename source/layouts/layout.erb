@@ -5,13 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= yield_content :head %>
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <!-- Stylesheets -->
     <%= stylesheet_link_tag "normalize" %>
     <%= stylesheet_link_tag "site" %>
-    <!-- Javascripts pages-->
-    <%= javascript_include_tag "site" %>
     <!-- Favicons-->
     <link rel="icon" href="/images/logos/favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="/images/logos/favicon.png" type="image/x-icon" />
@@ -22,5 +21,7 @@
       <%= yield %>
     </div>
     <%= partial 'partials/footer' %>
+    <!-- Javascripts pages-->
+    <%= javascript_include_tag "site" %>
   </body>
 </html>
