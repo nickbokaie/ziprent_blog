@@ -1,5 +1,6 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -20,7 +21,7 @@ end
 ignore '/templates/*'
 
 dato.tap do |dato|
-  paginate dato.articles, "", "/templates/index.html", per_page: 5
+  paginate dato.articles, "", "/templates/index.html", per_page: 20
 
   dato.articles.each do |article|
     proxy "/articles/#{article.slug}/index.html", "/templates/article.html", locals: { article: article }
