@@ -274,13 +274,14 @@ a.navbar-item,
 }
 
 .navbar-link {
-  padding-right: 2.5em;
+  /*padding-right: 2.5em;*/
 
   &::after {
     @include arrow($navbar-dropdown-arrow);
 
     margin-top: -0.375em;
     right: 1.125em;
+    display: none;
   }
 }
 
@@ -501,7 +502,7 @@ a.navbar-item,
     background-color: $navbar-dropdown-background-color;
     border-bottom-left-radius: $navbar-dropdown-radius;
     border-bottom-right-radius: $navbar-dropdown-radius;
-    border-top: $navbar-dropdown-border-top;
+    /*border-top: $navbar-dropdown-border-top;*/
     box-shadow: 0 8px 8px rgba($black, 0.1);
     display: none;
     font-size: 0.875rem;

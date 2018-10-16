@@ -1,5 +1,4 @@
-# Activate and configure extensions
-# https://middlemanapp.com/advanced/configuration/#configuring-extensions
+require 'redcarpet'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -16,6 +15,13 @@ end
 configure :build do
   activate :minify_html
   activate :minify_css
+end
+
+helpers do
+  def markdownify(text)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown.render(text)
+  end
 end
 
 ignore '/templates/*'

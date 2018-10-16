@@ -7,5 +7,7 @@
     <div class="detail-cover-img">
         <img src="<%= article.cover_image.url(w: 900, fm: :png) %>">
     </div>
-    <p><%= article.body_content %></p> 
+    <div>
+        <%= markdownify(article.body_content) %>
+    </div>
 </article>

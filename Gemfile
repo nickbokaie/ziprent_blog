@@ -8,3 +8,4 @@ gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem "middleman-dato"
 gem 'middleman-paginate'
+gem 'redcarpet'
