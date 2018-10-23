@@ -171,10 +171,21 @@ a {
 
 //Global container
 .main-container{
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5rem;
-  overflow-x: hidden;
+  @include for-size(phone-only){
+    margin: 0 auto;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  @include for-size(tablet-portrait-up){
+    margin: 0 auto;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  @include for-size(tablet-landscape-up){
+    padding: 5rem;
+  }
 }
 
 
@@ -198,11 +209,25 @@ a {
 
 // Post preview style
 
-.article-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+.article-grid{
+
+  @include for-size(phone-only){
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 25px;
+  }
+
+  @include for-size(tablet-portrait-up){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+
+  @include for-size(tablet-landscape-up){
+    grid-template-columns: repeat(3, 1fr);
+  }
 
 
   .article-category-date{
@@ -210,13 +235,30 @@ a {
   }
 }
 
-// Article Details
-.detail-container {
-  h1{text-align: center;}
-  p{
-    line-height: 1.6;
+.article_item{
+  p {
+    font-size: 16px;
   }
-  margin: 0 5rem;
+
+  img{width: 100%;}
+
+}
+
+// Article Details
+.detail_container {
+  h1{text-align: center;}
+  
+  @include for-size(phone-only){
+    margin: 0;
+  }
+
+  @include for-size(tablet-portrait-up){
+    margin: 0 3rem;
+  }
+
+  @include for-size(tablet-landscape-up){
+    margin: 0 5rem;
+  }
   
   .detail-cover-img{
     max-width: 800px;
@@ -227,10 +269,14 @@ a {
   }
 }
 
+.detail_copy {
+  h1{text-align: left;}
+}
+
 // Footer Styles
 
 .new-footer{
-  background-color: #487BB3;
+  background-color: $darkblue;
   a{
     color: white; 
     text-decoration: none;
@@ -290,12 +336,13 @@ a {
   }
 
   @include for-size(tablet-landscape-up){
-    padding: 25px 12rem;
+    padding: 25px 10rem;
   }
   li {
     font-size: 14px; 
   }
 }
+
 
 .footer-header{
   font-size: 16px;
@@ -306,4 +353,18 @@ a {
     margin: 0;
     font-size: 14px;
   }
+}
+
+.footer_location_grid{
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
+  grid-column-gap: 8px;
+}
+
+.footer_copyright{
+  font-size: 10px; 
+  text-align: center; 
+  color: white; 
+  padding-bottom: 10px;
 }

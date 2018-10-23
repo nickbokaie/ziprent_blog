@@ -2,12 +2,12 @@
   <%= dato_meta_tags(article) %>
 <% end %>
 
-<article class="detail-container">
+<article class="detail_container">
     <h1><%= article.title %></h1>
     <div class="detail-cover-img">
         <img src="<%= article.cover_image.url(w: 900, fm: :png) %>">
     </div>
-    <div>
+    <div class="detail_copy">
         <%= markdownify(article.body_content) %>
     </div>
 </article>

@@ -12,17 +12,18 @@
     <img src="/images/illustrations/blog.svg">
   </div>
 </div>
-
-<h2>Ziprent Ramblings</h2>
-
 <!-- Article container -->
+
 <div class="article-container">
-  <% items.each do |article| %>
-  <article>
-      <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image.url(w: 300, fm: :png) %>"></a>
-      <a href="/articles/<%= article.slug %>"><h3><%= article.title %></h3></a>
-      <p><%= article.description %></p>
-      <p class="article-category-date">Posted on <%= article.publication_date %> </p>
-  </article>
-  <% end %>
+  <h2>Articles</h2>
+  <div class="article-grid">
+    <% items.each do |article| %>
+    <article class="article_item">
+        <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image.url(fm: :png) %>"></a>
+        <a href="/articles/<%= article.slug %>"><h3><%= article.title %></h3></a>
+        <p><%= article.description %></p>
+        <p class="article-category-date">Posted on <%= article.publication_date %> </p>
+    </article>
+    <% end %>
+  </div>
 </div>
