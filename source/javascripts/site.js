@@ -19,5 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+//Headroom Config
+
+// grab an element
+var elem = document.querySelector("nav");
+// construct an instance of Headroom, passing the element
+
+var headroom = new Headroom(elem);
+
+// initialise
+headroom.init(); 
+
+
 // Scroll Reveal Script
 sr.reveal('.img-reveal', { duration: 1500 });
+
