@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="175px" height="175px" viewBox="0 0 175 175" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blog-overview-4" transform="translate(-632.000000, -169.000000)">
+            <g id="Group" transform="translate(632.000000, 169.000000)">
+                <circle id="Oval-2" fill="#487BB3" cx="87.5" cy="87.5" r="87.5"></circle>
+                <g id="logo/alt/white" transform="translate(29.701835, 35.483871)" fill="#FFFFFF">
+                    <g id="Shape">
+                        <polygon fill-rule="nonzero" points="34.249443 103.150177 81.9999923 103.150177 81.9999923 85.6947937 45.6625747 85.6947937 29.3820724 68.5751038 63.3341598 34 34.249443 34 0.3457031 68.5751038"></polygon>
+                        <polygon fill-rule="nonzero" points="81.0962677 0 33.3457031 0 33.3457031 17.4553833 69.6831207 17.4553833 85.963623 34.5751037 52.0115356 69.1502075 81.0962677 69.1502075 115 34.5751037"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -2,20 +2,18 @@
   <%= dato_meta_tags(dato.homepage) %>
 <% end %>
 
-<!-- Hero Container -->
-<div class="hero-container">
-  <div class="hero-title">
-    <h1><%= dato.homepage.header %></h1>
-    <p><%= dato.homepage.description %></p>
-  </div>
-  <div class="hero-img">
-    <img src="/images/illustrations/blog.svg">
-  </div>
+<!-- Third  Idea for top container - Medium Style -->
+
+<div class="top-container">
+  <img src="/images/logos/circle-logo.svg">
+  <h1>Ziprent Insights</h1>
+  <h3>A curration of our thoughts and expertise</h3>
 </div>
+
+<hr style="margin: 5% 0;">
 <!-- Article container -->
 
 <div class="article-container">
-  <h2>Articles</h2>
   <div class="article-grid">
     <% items.each do |article| %>
     <article class="article_item">
@@ -27,3 +25,4 @@
     <% end %>
   </div>
 </div>
+

@@ -17,6 +17,7 @@ $green: #0dab76;
 
 
 
+
 *{
 	box-sizing: border-box;
 }
@@ -36,7 +37,7 @@ html {
 body {
   line-height: $baseline;
   font-size: 18px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   color: #3e3e3e;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -98,28 +99,21 @@ a {
   }
 
   @include for-size(tablet-landscape-up){
-    padding: 5rem;
+    padding: 3rem 5rem 5rem;
   }
 }
 
+//Top Container - Use this one
 
-// Hero Container
-.hero-container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.top-container{
+  text-align: center;
+  margin: 3rem auto;
 
-  .hero-title{
-    align-self: center;
-    p{font-size: 24px;}
-  }
-
-  .hero-img{
-   justify-self: end;
-   img{
-     max-width: 600px;
-   }
+  img{
+    width: 175px;
   }
 }
+
 
 // Post preview style
 
@@ -160,23 +154,23 @@ a {
 
 // Article Details
 .detail_container {
-  h1{text-align: center;}
   
   @include for-size(phone-only){
     margin: 0;
   }
 
   @include for-size(tablet-portrait-up){
-    margin: 0 3rem;
+    margin: 0 4rem;
   }
 
   @include for-size(tablet-landscape-up){
-    margin: 0 5rem;
+    margin: 0 12rem;
   }
   
   .detail-cover-img{
     max-width: 800px;
     margin: 3rem auto;
+    
     img{
       width: 100%;
     }
@@ -187,98 +181,6 @@ a {
   h1{text-align: left;}
 }
 
-// Footer Styles
 
-.new-footer{
-  background-color: $darkblue;
-  a{
-    color: white; 
-    text-decoration: none;
-    &:hover {
-      opacity: .9;
-    }
-  }
-
-  ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.footer_top {
-  padding: 50px 50px 25px;
-  margin: 0 auto;
-  text-align: center;
-  img {
-    max-width: 75px;
-  }
-}
-
-.footer_icons {
-  display: flex;
-  justify-content: center;
-  margin-left: 40px;
-  padding: 25px 0px;  
-
-  a {
-    padding-right: 45px;
-  }
-}
-
-.footer_bottom{
-  @include for-size(phone-only){
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    margin: 0 auto;
-    color: white;
-    padding: 1rem 3rem;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    margin: 0 auto;
-    color: white;
-    padding: 1rem 3rem;
-  }
-
-  @include for-size(tablet-landscape-up){
-    padding: 25px 10rem;
-  }
-  li {
-    font-size: 14px; 
-  }
-}
-
-
-.footer-header{
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  
-  p{
-    margin: 0;
-    font-size: 14px;
-  }
-}
-
-.footer_location_grid{
-  display: grid;
-  grid-template-rows: repeat(3,1fr);
-  grid-template-columns: repeat(2,1fr);
-  grid-column-gap: 8px;
-}
-
-.footer_copyright{
-  font-size: 10px; 
-  text-align: center; 
-  color: white; 
-  padding-bottom: 10px;
-}
+// Footer CSS
+@import "mixins/footer.css.scss";
