@@ -5,7 +5,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :directory_indexes
-activate :dato
+activate :dato, preview: true
 activate :pagination
 
 configure :development do
