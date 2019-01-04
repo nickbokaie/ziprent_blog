@@ -33,7 +33,7 @@ html {
 
 body {
   line-height: $baseline;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #fff;
   color: $grey;
   font-family: 'SF Pro', sans-serif;
@@ -111,6 +111,7 @@ a {
 
   @include for-size(tablet-landscape-up){
     padding: 3rem 8rem 5rem;
+    max-width: 1800px;
   }
 }
 
@@ -127,10 +128,65 @@ a {
   h1{margin-top: 15px;}
   h3{
     margin-top: 15px;
-    font-weight: 400;
+    font-weight: 300;
   }
 }
 
+// Feature Container
+
+.article-grid {
+
+  @include for-size(phone-only){
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 25px;
+  }
+
+  @include for-size(tablet-portrait-up){
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1.5fr 2fr; 
+    grid-column-gap: 25px;
+    grid-row-gap: 50px;
+  }
+  
+  .article-img{
+    img{
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border: 0.5px solid #eee;
+    }
+  }
+
+  .article-text{
+    h2{margin-top: 0px;}
+    p{font-size: 16px}
+  }
+}
+
+.article-profile {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  
+  img{
+    max-width: 48px;
+    border-radius: 50%;
+  }
+
+  .article-profile-text {
+    p{
+      margin: 0px;
+      font-size: 14px;
+      font-weight: 500;
+      span{
+        font-size: 12px;
+        font-weight: 400
+      }
+    }
+  }
+}
 
 // Post preview style
 
@@ -145,15 +201,16 @@ a {
 
   @include for-size(tablet-portrait-up){
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-template-rows: auto;
+    grid-template-columns: 1.5fr 2fr; 
+    grid-column-gap: 25px;
   }
 
+  /*
   @include for-size(tablet-landscape-up){
     grid-template-columns: repeat(3, 1fr);
   }
-
+  */
 
   .article-category-date{
     font-size: 12px;
@@ -196,6 +253,10 @@ a {
 
 .detail_copy {
   h1{text-align: left;}
+  img {
+    width: 100%;
+    border: 0.5px solid #eee;
+  }
 }
 
 

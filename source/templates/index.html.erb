@@ -2,8 +2,6 @@
   <%= dato_meta_tags(dato.homepage) %>
 <% end %>
 
-<!-- Third  Idea for top container - Medium Style -->
-
 <div class="top-container">
   <img src="/images/logos/circle-logo.svg">
   <h1>Ziprent Insights</h1>
@@ -11,18 +9,26 @@
 </div>
 
 <hr style="margin: 5% 0;">
-<!-- Article container -->
+<!-- Article containers -->
 
 <div class="article-container">
+  <% items.each do |article| %>
   <div class="article-grid">
-    <% items.each do |article| %>
-    <article class="article_item">
+    <div class="article-img">
         <a href="/articles/<%= article.slug %>"><img src="<%= article.cover_image.url(fm: :png) %>"></a>
-        <a href="/articles/<%= article.slug %>"><h3><%= article.title %></h3></a>
-        <p><%= article.description %></p>
-        <p class="article-category-date">Posted on <%= article.publication_date %> </p>
-    </article>
-    <% end %>
+    </div>
+    <div class="article-text">
+      <a href="/articles/<%= article.slug %>"><h2><%= article.title %></h2></a>
+      <p><%= article.description %></p>
+      <div class="article-profile">
+        <img alt="Author profile" src="<%= article.author_profile_img.url(fm: :png) %>">
+        <div class= "article-profile-text">
+          <p><%= article.author %></p>
+          <p><span><%= article.read_time%></span></p>
+        </div>
+      </div>
+    </div>
   </div>
+  <% end %>
 </div>
 
