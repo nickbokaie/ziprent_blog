@@ -134,6 +134,11 @@ a {
 
 // Feature Container
 
+.article-container{
+  display: grid;
+  grid-row-gap: 50px;
+}
+
 .article-grid {
 
   @include for-size(phone-only){
