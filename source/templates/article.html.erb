@@ -4,6 +4,13 @@
 
 <article class="detail_container">
     <h1><%= article.title %></h1>
+    <div class="article-profile">
+        <img alt="Author profile" src="<%= article.author_profile_img.url(fm: :png) %>">
+        <div class= "article-profile-text">
+            <p><%= article.author %></p>
+            <p><span><%= article.read_time%></span></p>
+        </div>
+    </div>
     <div class="detail-cover-img">
         <img src="<%= article.cover_image.url(w: 900, fm: :png) %>">
     </div>

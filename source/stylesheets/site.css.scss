@@ -248,7 +248,7 @@ a {
   
   .detail-cover-img{
     max-width: 800px;
-    margin: 3rem auto;
+    margin: 1.5rem auto;
     
     img{
       width: 100%;
@@ -261,6 +261,11 @@ a {
   img {
     width: 100%;
     border: 0.5px solid #eee;
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: 14px;
   }
 }
 
