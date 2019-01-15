@@ -211,12 +211,6 @@ a {
     grid-column-gap: 25px;
   }
 
-  /*
-  @include for-size(tablet-landscape-up){
-    grid-template-columns: repeat(3, 1fr);
-  }
-  */
-
   .article-category-date{
     font-size: 12px;
   }
@@ -252,6 +246,7 @@ a {
     
     img{
       width: 100%;
+      border: 1px solid #eee;
     }
   }
 }
