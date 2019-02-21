@@ -262,6 +262,15 @@ a {
     text-align: center;
     font-size: 14px;
   }
+
+  a{
+    font-weight: 600;
+    color: #487BB3;
+
+    &:hover {
+      color: rgba(72, 124, 179, 0.822)
+    }
+  }
 }
 
 
