@@ -5,6 +5,7 @@ $blue: #7FBAFA;
 $darkblue: #2A4059;
 $grey: #4a4a4a;
 $green: #0dab76;
+$snow: #f9fafb;
 
 // Bulma Components
 @import "bulma/utilities/_all.scss";
@@ -14,6 +15,7 @@ $green: #0dab76;
 //Mixins
 @import "mixins/dynamic-font.css.scss";
 @import "mixins/breakpoints.css.scss";
+@import "mixins/buttons.css.scss";
 
 *{
 	box-sizing: border-box;
@@ -56,6 +58,13 @@ a {
   text-decoration: none;
 }
 
+// Helpers Styles
+
+.align-center-end{
+  justify-self: end;
+  align-self: center;
+}
+
 /* header */
 
 .has-box-shadow {
@@ -80,6 +89,12 @@ a {
   img {
     max-width: 150px;
   }
+}
+
+// Background Helpers
+.snow-bg-bottom{
+  border-top: 1px solid #e7e7e7;
+  background: $snow;
 }
 
 // Headroom CSS
@@ -115,6 +130,18 @@ a {
   }
 }
 
+// Paddings - From parent site
+.main-padding {
+  @include for-size(phone-only){
+    padding: 3rem;
+  }
+
+  @include for-size(tablet-portrait-up){
+    padding: 3rem 8rem;
+  }
+}
+
+
 //Top Container
 
 .top-container{
@@ -132,11 +159,37 @@ a {
   }
 }
 
+// Two Col Helpers
+
+.two-col-container {
+
+  h2{margin-top:0;}
+  
+  @include for-size (phone-only){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 25px;
+  }
+
+  @include for-size (tablet-portrait-up){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include for-size(tablet-landscape-up){
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 125px;
+  }
+}
+
 // Feature Container
 
 .article-container{
   display: grid;
-  grid-row-gap: 50px;
+  grid-row-gap: 75px;
 }
 
 .article-grid {
@@ -152,7 +205,7 @@ a {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1.5fr 2fr; 
-    grid-column-gap: 25px;
+    grid-column-gap: 50px;
     grid-row-gap: 50px;
   }
   
@@ -208,7 +261,7 @@ a {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1.5fr 2fr; 
-    grid-column-gap: 25px;
+    grid-column-gap: 50px;
   }
 
   .article-category-date{
